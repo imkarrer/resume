@@ -51,14 +51,6 @@ Dean's List (Fall 13, Spring 14) \\
 \sectionspace % Some whitespace after the section
 
 %------------------------------------------------
-
-\subsection{LBJ LASA}
-Liberal Arts \& Science Academy \\
-\location{Grad. May 2005 | Austin, Tx}
-
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
 % Coursework
 %------------------------------------------------
 
@@ -72,6 +64,14 @@ Data Compression \\
 Networks \\
 Data Structures \\
 Object Oriented Design
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
+\subsection{LBJ LASA}
+Liberal Arts \& Science Academy \\
+\location{Grad. May 2005 | Austin, Tx}
 
 \sectionspace % Some whitespace after the section
 
@@ -96,7 +96,7 @@ Golang \textbullet{} Ruby \textbullet{} C++ \textbullet{} MySQL \\
 \sectionspace
 
 \subsection{Deployment/CI}
-Jenkins \textbullet{} Bamboo\\
+Buildkite \textbullet{} Jenkins\\
 Gradle \textbullet{} Docker \textbullet{} Vagrant\\ 
 
 \sectionspace % Some whitespace after the section
@@ -133,18 +133,21 @@ IBM Softlayer \textbullet{} Oracle CRM DB\\
 \section{Experience}
 
 \runsubsection{elasticsearch}
-\location{| Senior Software Engineer}
+\location{| Principal Software Engineer}
 \location{April 2018 - Current | Remote }
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightitemize}
-\item Implemented Release Exit Check quality gate to assert the health of our public cloud as we released across cloud providers and their regions.
-\item Teams started adding tests to the Release Exit Checks when they saw we could catch things as the release progressed.  Adding an annotation to a test was all that was required to add it to the release.
-\item Ownership of Release Exit Checks distributed to teams who owned the test.
+\item Automation of OS and OS Package updates.
+\item Upgraded from 0.11.15 terraform to latest for ephemeral test environments.
+\item Extend golang test framework for deployment configuration DSL to test interface between config DSL and deployment CLI.
+\item Upgrade Wiremock based integration test environment to use Prism.
+\item Mentored others on test pipeline implementation on Buildkite.
+\item Led migration of all cloud test pipelines from Jenkins to Buildkite. Reduced LoC and complexity of pipelines by 10x without losing feature parity.
+\item Implemented Release Exit Check quality gate to assert the health of the public cloud as we released across providers and their regions.  Suite expansion by teams via java annotation.
 \item cloud-sdk-java for consuming Elasticsearch Service in java projects. 
 \item Implemented patterns for initializing swagger api controllers as the desired persona and authentication strategy in the scalatest framework.
-\item Implemented key primitives in the scalatest framework to facilitate migrating system tests from the ClustersApi to the DeploymentsApi.  Teams quickly completed the migration when the ClustersApi was EOL.
-\item Executed tactical refactors to simplify the maintenance burden of scalatests.
-\item Worked the customer facing support queue as a platform admin to debug, triage, and remidate broken elasticsearch deployments on Elasticsearch Service and Elastic Cloud Enterprise.
+\item Implemented key primitives in the scalatest framework to facilitate migrating system tests from the old ClustersApi to the new DeploymentsApi.  Teams quickly completed the migration when the ClustersApi was EOL.
+\item Worked the customer facing support queue as a platform admin to debug, triage, and remediate broken elasticsearch deployments.
 \end{tightitemize}
 
 \sectionspace % Some whitespace after the section
@@ -157,9 +160,9 @@ IBM Softlayer \textbullet{} Oracle CRM DB\\
 \item Implemented REST client for legacy Customer API using Spring and JaxB
 \item Led team of 5 others to automate existing manual regression suite.
 \item Automated reporting of Test Results into TestRail using Python.
-\item Implemented component tagging scheme to ensure that every test could be expedited to a development team for triage when failures occured.
-\item Led intern project to expose the MacOS Accessbility API via a REST server implemented in Swift so that we could control applications on the screen after a VNC session had been established.
-\item Implemented Client Reservation Server using Spring Boot, Docker, and Gradle.  Used MySQL, H2, and Swagger Code Gen.  Service has been in production for 1+ year with 99.99\% availabilty.
+\item Implemented component tagging scheme to ensure that every test could be expedited to a development team for triage when failures occurred.
+\item Led intern project to expose the MacOS Accessibility API via a Swift REST server so that we could control applications on the screen in a VNC session.
+\item Implemented Client Reservation Server using Spring Boot, Docker, and Gradle.  Used MySQL, H2, and Swagger Code Gen.  Service had 99.99\% availability.
 \end{tightitemize}
 
 \sectionspace % Some whitespace after the section
